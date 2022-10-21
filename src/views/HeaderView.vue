@@ -32,10 +32,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   background-color: rgba(56, 56, 228, 0.5);
-
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-  }
+  padding: 20px 0;
 }
 
 .title img {

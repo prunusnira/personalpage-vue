@@ -4,16 +4,22 @@ export default {
     iconUrl: String,
     text: String,
     desc: String,
+    onClick: Function,
   },
-  btnTop: "top",
-  btnBottom: "bottom",
+  data: () => {
+    return {
+      btnAll: "btn",
+      btnTop: "top",
+      btnBottom: "bottom",
+    };
+  },
 };
 </script>
 
 <template>
-  <button>
+  <button :class="btnAll">
     <div :class="btnTop">
-      <img src="iconUrl" />
+      <img :src="iconUrl" />
       <span>{{ text }}</span>
     </div>
     <div :class="btnBottom">
@@ -23,11 +29,34 @@ export default {
 </template>
 
 <style>
+.btn {
+  border: none;
+  background-color: transparent;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.3);
+}
+
 .top {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.top img {
+  width: 40px;
+  height: 40px;
+}
+
+.top span {
+  font-size: 24px;
 }
 
 .bottom {
+  font-size: 18px;
 }
 </style>
