@@ -22,6 +22,10 @@ export default {
 
 <style scoped>
 .proj {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 .title {

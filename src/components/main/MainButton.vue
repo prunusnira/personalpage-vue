@@ -4,7 +4,7 @@ export default {
     iconUrl: String,
     text: String,
     desc: String,
-    onClick: Function,
+    href: String,
   },
   data: () => {
     return {
@@ -13,11 +13,17 @@ export default {
       btnBottom: "bottom",
     };
   },
+  methods: {
+    moveToLink: function () {
+      const link = this.$props.href;
+      link ? (window.location.href = link) : console.error("no link");
+    },
+  },
 };
 </script>
 
 <template>
-  <button :class="btnAll">
+  <button :class="btnAll" @click="moveToLink">
     <div :class="btnTop">
       <img :src="iconUrl" />
       <span>{{ text }}</span>

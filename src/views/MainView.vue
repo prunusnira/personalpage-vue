@@ -22,18 +22,26 @@ export default {
       iconUrl="/main/icon_about.png"
       text="About"
       desc="Nira를 소개합니다"
+      href="/about"
     />
     <MainButton
       iconUrl="/main/icon_tech.png"
       text="Tech Stack"
       desc="사용 가능한 기술 스택"
+      href="/tech"
     />
     <MainButton
       iconUrl="/main/icon_proj.png"
       text="Project"
       desc="진행 프로젝트 목록"
+      href="/project"
     />
-    <MainButton iconUrl="/main/icon_link.png" text="Link" desc="관련 링크" />
+    <MainButton
+      iconUrl="/main/icon_link.png"
+      text="Link"
+      desc="관련 링크"
+      href="/link"
+    />
   </div>
 </template>
 
