@@ -9,6 +9,7 @@ export default {
       techFront,
       techBackend,
       techNonWeb,
+      techBox: "techBox",
     };
   },
   components: { TechBox },
@@ -16,11 +17,20 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div :class="techBox">
     <TechBox :item="techFront" />
     <TechBox :item="techBackend" />
     <TechBox :item="techNonWeb" />
   </div>
 </template>
 
-<style></style>
+<style scoped>
+.techBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1024px;
+}
+</style>
