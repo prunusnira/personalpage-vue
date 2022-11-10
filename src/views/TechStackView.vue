@@ -19,7 +19,7 @@ export default {
       Tech
       <font-awesome-icon icon="fa-solid fa-angle-double-left" />
     </div>
-    <div>사용해 본 기술을 나열하였습니다</div>
+    <div>잠시마나 사용해 본 기술을 나열하였습니다</div>
     <TechLayout />
   </div>
 </template>
@@ -33,5 +33,6 @@ export default {
 }
 
 .title {
+  font-size: 36px;
 }
 </style>

@@ -1,4 +1,6 @@
 <script lang="ts">
+import ProjLayout from "@/components/project/ProjLayout.vue";
+
 export default {
   data() {
     return {
@@ -6,6 +8,7 @@ export default {
       title: "title",
     };
   },
+  components: { ProjLayout },
 };
 </script>
 
@@ -17,6 +20,7 @@ export default {
       <font-awesome-icon icon="fa-solid fa-angle-double-left" />
     </div>
     <div>각 항목을 클릭해서 펼쳐보세요</div>
+    <ProjLayout />
   </div>
 </template>
 
@@ -29,5 +33,6 @@ export default {
 }
 
 .title {
+  font-size: 36px;
 }
 </style>
