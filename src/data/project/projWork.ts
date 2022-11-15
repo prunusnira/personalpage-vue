@@ -1,6 +1,6 @@
-import type { ProjItemTemplate } from "./projectItem";
+import type { ProjItem } from "./projectItem";
 
-const projWork: Array<ProjItemTemplate> = [
+const ProjWork: Array<ProjItem> = [
   {
     icon: "",
     title: {
@@ -394,4 +394,4 @@ const projWork: Array<ProjItemTemplate> = [
   },
 ];
 
-export default projWork;
+export default ProjWork;

@@ -1,6 +1,6 @@
-import type { ProjItemTemplate } from "./projectItem";
+import type { ProjItem } from "./projectItem";
 
-const projPersonal: Array<ProjItemTemplate> = [
+const ProjPersonal: Array<ProjItem> = [
   {
     icon: "/project/sin/icon.png",
     title: {
@@ -290,4 +290,4 @@ const projPersonal: Array<ProjItemTemplate> = [
   },
 ];
 
-export default projPersonal;
+export default ProjPersonal;
