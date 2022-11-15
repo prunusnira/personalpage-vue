@@ -9,16 +9,34 @@ export default {
     type: String,
   },
   components: { ProjItemVue },
+  data() {
+    return {
+      title: "title",
+      projBox: "projBox",
+    };
+  },
 };
 </script>
 
 <template>
   <div>
-    <div>{{ type }}</div>
-    <div v-for="i in arr">
-      <ProjItemVue :item="i" />
+    <div :class="title">{{ type }}</div>
+    <div :class="projBox">
+      <ProjItemVue v-for="i in arr" :item="i" />
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.projBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+</style>

@@ -2,80 +2,91 @@ import type { ProjItem } from "./projectItem";
 
 const ProjWork: Array<ProjItem> = [
   {
-    icon: "",
+    icon: "/project/copin200/logo.png",
     title: {
-      ko: "",
+      ko: "Copin Comics 2.0",
       jp: "",
       en: "",
     },
     simpledesc: {
-      ko: "",
+      ko: "기존 레거시 사이트 포팅 후 새로운 기능을 추가한 신 버전을 개발",
       jp: "",
       en: "",
     },
-    platform: "",
-    tech: "",
-    period: "",
-    link: [""],
+    platform: "Web",
+    tech: "ReactJS (TypeScript), NextJS, Redux, styled-components",
+    period: "2022.02-2022.07",
+    link: ["https://www.copincomics.com"],
     content: {
       ko: `<ul>
-                    <li></li>
-                    <li></li>
+                    <li>1.5 개발 완료 후 새로운 기능을 추가하는 확장 버전 개발을 초기에 계획</li>
+                    <li>점점 기획이 커지면서 새롭게 개편을 하자는 방향으로 변경</li>
+                    <li>그래서 모든 코드베이스를 처음부터 다시 개발하는 방향으로 진행됨</li>
                 </ul>`,
       jp: "",
       en: "",
     },
     dev: {
       ko: `
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[ 담당파트: 프론트엔드, ChatScript와 연결하는 중간서버, 안드로이드 앱, DB설계 ]</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[ 담당파트: 프론트엔드 개발 파트장, 프론트엔드 설계, 기술 선택, 개발, 테스트 등 ]</b>
                 <ul>
-                    <li>프론트엔드: ReactJS (TypeScript), Bootstrap (Reactstrap) 사용</li>
-                    <li>안드로이드: Kotlin으로 개발, WebView를 사용한 하이브리드 앱</li>
-                    <li>중간서버: SpringBoot(Kotlin)으로 개발, 백엔드 파트와 연동을 위해 구현. ChatScript와 통신을 위한 REST API 구축</li>
-                    <li>시스템 구성: NGINX위에 Reversed Proxy를 사용해 백엔드와 프론트엔드를 모두 구동</li>
+                    <li>NextJS를 도입하면서 기존에 사용했던 redux를 활용할 수 없는 부분들이 여럿 발생하여 이를 해결하기 위해 cookie 활용 등에 대한 연구를 진행</li>
+                    <li></li>
                 </ul>`,
       jp: "",
       en: "",
     },
-    image: ["", "", "", "/project/chatbot/04.jpg"],
+    image: [
+      "/project/copin200/cc2001.png",
+      "/project/copin200/cc2002.png",
+      "/project/copin200/cc2003.png",
+      "/project/copin200/cc2004.png",
+    ],
   },
   {
-    icon: "",
+    icon: "/project/copin150/logo.png",
     title: {
-      ko: "",
+      ko: "Copin Comics 1.5 (레거시 포팅)",
       jp: "",
       en: "",
     },
     simpledesc: {
-      ko: "",
+      ko: "php로 개발되었던 기존 서비스를 React로 포팅",
       jp: "",
       en: "",
     },
-    platform: "",
-    tech: "",
-    period: "",
-    link: [""],
+    platform: "Web",
+    tech: "ReactJS (TypeScript), styled-components, Redux",
+    period: "2021.12-2022.02",
+    link: ["https://www.copincomics.com"],
     content: {
       ko: `<ul>
-                    <li></li>
-                    <li></li>
+                    <li>php로 서버/클라이언트가 통합되어 개발되었던 초기의 서비스를 프론트와 백엔드로 분리</li>
+                    <li>기존 서비스의 구조를 그대로 React로 옮기는 것을 중점으로 개발 진행</li>
+                    <li>기존 홈페이지의 UI의 기조를 유지하여 새롭게 디자인 작업을 진행</li>
+                    <li>백엔드는 Spring Boot로 백엔드팀에서 별도로 개발 진행</li>
                 </ul>`,
       jp: "",
       en: "",
     },
     dev: {
       ko: `
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[ 담당파트: 프론트엔드, ChatScript와 연결하는 중간서버, 안드로이드 앱, DB설계 ]</b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[ 담당파트: 프론트엔드 개발 파트장, 프론트엔드 설계, 기술 선택, 개발, 테스트 등 ]</b>
                 <ul>
-                    <li>프론트엔드: ReactJS (TypeScript), Bootstrap (Reactstrap) 사용</li>
-                    <li>안드로이드: Kotlin으로 개발, WebView를 사용한 하이브리드 앱</li>
-                    <li>중간서버: SpringBoot(Kotlin)으로 개발, 백엔드 파트와 연동을 위해 구현. ChatScript와 통신을 위한 REST API 구축</li>
-                    <li>시스템 구성: NGINX위에 Reversed Proxy를 사용해 백엔드와 프론트엔드를 모두 구동</li>
+                    <li>프론트엔드 팀원 2명이 개발을 진행</li>
+                    <li>주어진 개발 기간이 짧아 기획/디자인 팀과 동시에 작업을 진행</li>
+                    <li>이를 위해 시스템 기반을 먼저 작업하고 이후 기능별 별도 개발을 진행</li>
+                    <li>특히 기존 레거시 페이지는 반응형에 대한 처리가 되어있지 않고 스크린 사이즈에 따라 별도로 페이지를 만드는 형태로 작업이 되어있어 이를 새롭게 정의하였음</li>
                 </ul>`,
       jp: "",
       en: "",
     },
-    image: ["", "", "", "/project/chatbot/04.jpg"],
+    image: [
+      "/project/copin150/cc1501.png",
+      "/project/copin150/cc1502.png",
+      "/project/copin150/cc1503.png",
+      "/project/copin150/cc1504.png",
+    ],
   },
   {
     icon: "/project/chatbot/icon.png",

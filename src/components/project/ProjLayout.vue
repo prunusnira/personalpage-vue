@@ -8,7 +8,7 @@ export default {
     return {
       tabBox: "tabBox",
       btnTab: "btnTab",
-      projBox: "projBox",
+      contWrap: "contWrap",
       tabType: 0,
       ProjWork,
       ProjPersonal,
@@ -46,7 +46,7 @@ export default {
     <button id="btn0" :class="btnTab" @click="changeTab(0)">Work</button>
     <button id="btn1" :class="btnTab" @click="changeTab(1)">Personal</button>
   </div>
-  <div :class="projBox">
+  <div :class="contWrap">
     <ProjBox v-if="tabType === 0" :arr="ProjWork" type="Work" />
     <ProjBox v-if="tabType === 1" :arr="ProjPersonal" type="Personal" />
   </div>
@@ -63,5 +63,10 @@ export default {
   background-color: black;
   color: white;
   cursor: pointer;
+}
+
+.contWrap {
+  width: 100%;
+  max-width: 1024px;
 }
 </style>
