@@ -29,8 +29,9 @@ export default {
 
 <style scoped>
 .title {
-  font-size: 24px;
+  font-size: 32px;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .projBox {

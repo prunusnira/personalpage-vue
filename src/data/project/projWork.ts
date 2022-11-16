@@ -9,7 +9,7 @@ const ProjWork: Array<ProjItem> = [
       en: "",
     },
     simpledesc: {
-      ko: "기존 레거시 사이트 포팅 후 새로운 기능을 추가한 신 버전을 개발",
+      ko: "레거시 포팅 이후 새 기능 등을 추가하여 새로운 코드베이스로 개발",
       jp: "",
       en: "",
     },

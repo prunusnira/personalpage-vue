@@ -10,6 +10,7 @@ export default {
     return {
       wrap: "wrap",
       header: "header",
+      headerLeft: "headerLeft",
       icon: "icon",
       titlewrap: "titlewrap",
       title: "title",
@@ -20,26 +21,41 @@ export default {
       bottomItem: "bottomItem",
       itemImgWrap: "itemImgWrap",
       itemImg: "itemImg",
+      isOpen: false,
     };
   },
   methods: {
-    openItem: () => {},
-    closeItem: () => {},
+    changeOpen: function () {
+      this.isOpen = !this.isOpen;
+    },
+  },
+  computed: {
+    cssVariable() {
+      return {
+        "--isOpen": this.isOpen ? "visible" : "hidden",
+        "--height": this.isOpen ? "auto" : "0",
+        "--pval": this.isOpen ? "20px" : "0",
+      };
+    },
   },
 };
 </script>
 
 <template>
   <div :class="wrap">
-    <div :class="header" @click="openItem()">
-      <img :class="icon" :src="item!.icon" />
-      <div :class="titlewrap">
-        <div :class="title">{{ item!.title["ko"] }}</div>
-        <div :class="subtitle">{{ item!.simpledesc["ko"] }}</div>
+    <div :class="header" @click="changeOpen()">
+      <div :class="headerLeft">
+        <img :class="icon" :src="item!.icon" />
+        <div :class="titlewrap">
+          <div :class="title">{{ item!.title["ko"] }}</div>
+          <div :class="subtitle">{{ item!.simpledesc["ko"] }}</div>
+        </div>
       </div>
-      <div :class="type"></div>
+      <div :class="type">
+        {{ item!.platform }}
+      </div>
     </div>
-    <div id="bottom" :class="bottomWrap">
+    <div id="bottom" :class="bottomWrap" :style="cssVariable">
       <div :class="bottomItem">
         <div :class="itemTitle">Platform</div>
         <div>{{ item!.platform }}</div>
@@ -67,7 +83,7 @@ export default {
         <div v-html="item!.dev['ko']"></div>
       </div>
       <div :class="bottomItem">
-        <div :class="itemTitle">Image</div>
+        <div :class="itemTitle">Images</div>
         <div :class="itemImgWrap">
           <a
             v-for="i in item!.image"
@@ -95,6 +111,13 @@ export default {
   flex-direction: row;
   cursor: pointer;
   padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: row;
 }
 
 .icon {
@@ -120,9 +143,11 @@ export default {
 
 .bottomWrap {
   background-color: #ffffff;
-  margin: 20px;
-  padding: 20px;
+  margin: var(--pval);
+  padding: var(--pval);
   border-radius: 10px;
+  visibility: var(--isOpen);
+  height: var(--height);
 }
 
 .itemTitle {
@@ -142,5 +167,6 @@ export default {
 
 .itemImg {
   max-width: 250px;
+  border: solid 1px #afafaf;
 }
 </style>

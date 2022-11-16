@@ -43,12 +43,20 @@ export default {
 
 <template>
   <div :class="tabBox">
-    <button id="btn0" :class="btnTab" @click="changeTab(0)">Work</button>
-    <button id="btn1" :class="btnTab" @click="changeTab(1)">Personal</button>
+    <button id="btn0" :class="btnTab" @click="changeTab(0)">
+      Work Projects
+    </button>
+    <button id="btn1" :class="btnTab" @click="changeTab(1)">
+      Personal Projects
+    </button>
   </div>
   <div :class="contWrap">
-    <ProjBox v-if="tabType === 0" :arr="ProjWork" type="Work" />
-    <ProjBox v-if="tabType === 1" :arr="ProjPersonal" type="Personal" />
+    <ProjBox v-if="tabType === 0" :arr="ProjWork" type="Work Projects" />
+    <ProjBox
+      v-if="tabType === 1"
+      :arr="ProjPersonal"
+      type="Personal Projects"
+    />
   </div>
 </template>
 
