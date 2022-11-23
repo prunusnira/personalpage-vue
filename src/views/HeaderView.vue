@@ -5,6 +5,7 @@ export default {
       headerOuter: "headerOuter",
       headerTitle: "title",
       headerMenu: "menu",
+      langFloat: "langFloat",
     };
   },
 };
@@ -21,8 +22,17 @@ export default {
       <RouterLink to="/tech">Tech Stack</RouterLink>
       <RouterLink to="/project">Project</RouterLink>
       <RouterLink to="/link">Link</RouterLink>
+      <div>Lang</div>
+      <div>Theme</div>
     </div>
   </section>
+
+  <div :class="langFloat">
+    <div>한국어</div>
+    <div>English</div>
+    <div>日本語</div>
+    <div>close</div>
+  </div>
 </template>
 
 <style scoped>
@@ -45,6 +55,16 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.langFloat {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  border: solid 0.5px gray;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
 }
 
 a {
