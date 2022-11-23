@@ -1,4 +1,6 @@
 <script lang="ts">
+import { useThemeStore } from "@/stores/theme";
+
 export default {
   props: {
     iconUrl: String,
@@ -7,8 +9,9 @@ export default {
     href: String,
   },
   data: () => {
+    const theme = useThemeStore().theme;
     return {
-      btnAll: "btn",
+      btnAll: theme === "light" ? "btn" : "btn btndark",
       btnTop: "top",
       btnBottom: "bottom",
     };
@@ -40,6 +43,10 @@ export default {
   background-color: transparent;
   transition: transform 0.2s;
   cursor: pointer;
+}
+
+.btndark {
+  color: white;
 }
 
 .btn:hover {
