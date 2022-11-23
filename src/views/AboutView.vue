@@ -1,10 +1,13 @@
 <script lang="ts">
 import TxtAbout from "@/data/text/about";
 import WorkExp from "@/components/about/WorkExp.vue";
+import { Lang, useLangStore } from "@/stores/lang";
+
 export default {
   name: "About",
   components: { TxtAbout, WorkExp },
   data() {
+    const lang = useLangStore().lang;
     return {
       about: "about",
       title: "title",
@@ -14,7 +17,12 @@ export default {
       content: "content",
       contentWrap: "contentWrap",
       contentAbout: "contentAbout",
-      TxtAbout: TxtAbout,
+      TxtAbout:
+        lang === Lang.KO
+          ? TxtAbout.ko
+          : lang === Lang.JP
+          ? TxtAbout.jp
+          : TxtAbout.en,
     };
   },
 };

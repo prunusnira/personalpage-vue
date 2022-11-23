@@ -3,7 +3,10 @@ import type { TechDetails, TechItem } from "./techItem";
 const techUnity: TechDetails = {
   name: "Unity 3D",
   about: ["이전 회사 및 개인 개발로 간단한 게임을 만들어 본 적이 있습니다"],
-  exp: [],
+  exp: [
+    "AI 라이브러리 활용 게임 개발 (업무)",
+    "리듬게임 BMS Player 토이프로젝트 개발 진행 (Project 참고)",
+  ],
   etc: [],
 };
 
@@ -31,7 +34,7 @@ const techNonDev: TechDetails = {
     "DaVinci Resolve 영상편집 가능",
   ],
   exp: [],
-  etc: [],
+  etc: ["YouTube에서 팬 영상 편집 채널 운영 중"],
 };
 
 const techEtc: TechDetails = {
