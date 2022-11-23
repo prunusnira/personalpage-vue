@@ -1,10 +1,16 @@
 <script lang="ts">
+import TxtMain from "@/data/text";
+import { useLangStore } from "@/stores/lang";
+
 export default {
   data() {
+    const lang = useLangStore().lang;
     return {
       title: "title",
       titleName: "titleName",
       titleDesc: "titleDesc",
+      TxtMain:
+        lang === "ko" ? TxtMain.ko : lang === "jp" ? TxtMain.jp : TxtMain.en,
     };
   },
 };
@@ -14,7 +20,7 @@ export default {
   <div :class="title">
     <div :class="titleName">Nira</div>
     <div :class="titleDesc">
-      코드로 많은 사람들에게 다가가고 싶은 개발자입니다
+      {{ TxtMain.desc }}
     </div>
   </div>
 </template>

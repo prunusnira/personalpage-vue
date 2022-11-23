@@ -1,6 +1,8 @@
 <script lang="ts">
 import MainButton from "@/components/main/MainButton.vue";
 import MainTitle from "@/components/main/MainTitle.vue";
+import TxtMain from "@/data/text";
+import { useLangStore } from "@/stores/lang";
 
 export default {
   name: "MainView",
@@ -9,8 +11,11 @@ export default {
     MainTitle,
   },
   data() {
+    const lang = useLangStore().lang;
     return {
       view: "view",
+      TxtMain:
+        lang === "ko" ? TxtMain.ko : lang === "jp" ? TxtMain.jp : TxtMain.en,
     };
   },
 };
@@ -22,25 +27,25 @@ export default {
     <MainButton
       iconUrl="/main/icon_about.png"
       text="About"
-      desc="Nira를 소개합니다"
+      :desc="TxtMain.btn.about"
       href="/about"
     />
     <MainButton
       iconUrl="/main/icon_tech.png"
       text="Tech Stack"
-      desc="사용 가능한 기술 스택"
+      :desc="TxtMain.btn.tech"
       href="/tech"
     />
     <MainButton
       iconUrl="/main/icon_proj.png"
       text="Project"
-      desc="진행 프로젝트 목록"
+      :desc="TxtMain.btn.proj"
       href="/project"
     />
     <MainButton
       iconUrl="/main/icon_link.png"
       text="Link"
-      desc="관련 링크"
+      :desc="TxtMain.btn.link"
       href="/link"
     />
   </div>
