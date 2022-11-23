@@ -33,6 +33,8 @@ export default {
   justify-content: space-between;
   background-color: rgba(56, 56, 228, 0.5);
   padding: 20px 0;
+  position: sticky;
+  top: 0;
 }
 
 .title img {
