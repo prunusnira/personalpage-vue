@@ -89,7 +89,7 @@ export default {
             v-for="i in item!.image"
             :href="i"
             target="_blank"
-            rel="noopener noreferer"
+            rel="noopener noreferrer"
           >
             <img :class="itemImg" :src="i" />
           </a>
