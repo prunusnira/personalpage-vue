@@ -5,6 +5,7 @@ export default {
       headerOuter: "headerOuter",
       headerTitle: "title",
       headerMenu: "menu",
+      menuText: "menuText",
       langFloat: "langFloat",
     };
   },
@@ -17,13 +18,13 @@ export default {
       <img src="" />
     </div>
     <div :class="headerMenu">
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-      <RouterLink to="/tech">Tech Stack</RouterLink>
-      <RouterLink to="/project">Project</RouterLink>
-      <RouterLink to="/link">Link</RouterLink>
-      <div>Lang</div>
-      <div>Theme</div>
+      <RouterLink to="/" :class="menuText">Home</RouterLink>
+      <RouterLink to="/about" :class="menuText">About</RouterLink>
+      <RouterLink to="/tech" :class="menuText">Tech Stack</RouterLink>
+      <RouterLink to="/project" :class="menuText">Project</RouterLink>
+      <RouterLink to="/link" :class="menuText">Link</RouterLink>
+      <div :class="menuText">Lang</div>
+      <div :class="menuText">Theme</div>
     </div>
   </section>
 
@@ -58,7 +59,7 @@ export default {
 }
 
 .langFloat {
-  position: absolute;
+  position: fixed;
   top: 50px;
   right: 30px;
   border: solid 0.5px gray;
@@ -67,9 +68,10 @@ export default {
   text-align: center;
 }
 
-a {
+.menuText {
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
