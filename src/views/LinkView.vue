@@ -1,11 +1,15 @@
 <script lang="ts">
+import LinkItemVue from "@/components/link/LinkItem.vue";
+
 export default {
   data() {
     return {
       link: "link",
       title: "title",
+      wrapper: "wrapper",
     };
   },
+  components: { LinkItemVue },
 };
 </script>
 
@@ -16,8 +20,13 @@ export default {
       Link
       <font-awesome-icon icon="fa-solid fa-angle-double-left" />
     </div>
-    <div></div>
-    <div></div>
+    <div :class="wrapper">
+      <LinkItemVue title="Blog" src="https://prunusnira.tistory.com" />
+      <LinkItemVue title="GitHub" src="https://github.com/prunusnira" />
+      <LinkItemVue title="Skill Navigator" src="https://sin.nira.one" />
+      <LinkItemVue title="PIU Clear Manager" src="https://piu.nira.one" />
+      <LinkItemVue title="Twitch BanPicker" src="https://banpick.nira.one" />
+    </div>
   </div>
 </template>
 
@@ -31,5 +40,11 @@ export default {
 
 .title {
   font-size: 36px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 </style>

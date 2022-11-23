@@ -11,6 +11,11 @@ export default {
       linkSrc: "linkSrc",
     };
   },
+  methods: {
+    openLink: function () {
+      window.open(this.$props.src, "_blank", "noreferrer noopener");
+    },
+  },
 };
 </script>
 
@@ -19,7 +24,7 @@ export default {
     <div :class="linkTitle">
       {{ $props.title }}
     </div>
-    <div :class="linkSrc">
+    <div :class="linkSrc" @:click="openLink">
       {{ $props.src }}
     </div>
   </div>
@@ -32,8 +37,14 @@ export default {
 }
 
 .linkTitle {
+  font-weight: bold;
+  font-size: 20px;
+  width: 200px;
 }
 
 .linkSrc {
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 </style>
