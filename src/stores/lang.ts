@@ -1,15 +1,15 @@
 import { ref } from "vue";
 import { defineStore } from "pinia";
 
-export enum Lang {
-  KO,
-  EN,
-  JP,
-}
+export const Lang = {
+  KO: "ko",
+  EN: "en",
+  JP: "jp",
+};
 
 export const useLangStore = defineStore("lang", () => {
   const lang = ref(Lang.KO);
-  function changeLang(_lang: Lang) {
+  function changeLang(_lang: string) {
     lang.value = _lang;
   }
 

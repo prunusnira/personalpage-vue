@@ -11,6 +11,7 @@ export default {
       menuText: "menuText",
       langFloat: "langFloat",
       mobileFloat: "mobileFloat",
+      menuItem: "menuItem",
     };
   },
   methods: {
@@ -29,12 +30,27 @@ export default {
     changeLang: (type: number) => {
       const store = useLangStore();
       store.changeLang(type === 0 ? Lang.KO : type === 1 ? Lang.EN : Lang.JP);
+      location.reload();
     },
     changeTheme: () => {
       const store = useThemeStore();
       const nextTheme = store.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
       store.changeTheme(nextTheme);
     },
+  },
+  created() {
+    const store = useLangStore();
+    if (!store.lang) {
+      let lang = navigator.language;
+
+      if (lang === "ko" || lang === "ko-kr" || lang === "ko-KR") {
+        store.changeLang(Lang.KO);
+      } else if (lang === "ja" || lang === "ja-jp" || lang === "ja-JP") {
+        store.changeLang(Lang.JP);
+      } else {
+        store.changeLang(Lang.EN);
+      }
+    }
   },
 };
 </script>
@@ -58,19 +74,23 @@ export default {
   </section>
 
   <div :class="langFloat" id="langMenu">
-    <div @click="changeLang(0)">한국어</div>
-    <div @click="changeLang(1)">English</div>
-    <div @click="changeLang(2)">日本語</div>
-    <div @click="closeLangMenu">close</div>
+    <div :class="menuItem" @click="changeLang(0)">한국어</div>
+    <div :class="menuItem" @click="changeLang(1)">English</div>
+    <div :class="menuItem" @click="changeLang(2)">日本語</div>
+    <div :class="menuItem" @click="closeLangMenu">
+      <font-awesome-icon icon="fa-solid fa-circle-xmark" />
+    </div>
   </div>
 
   <div :class="mobileFloat" id="mobileMenu">
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-    <RouterLink to="/tech">Tech Stack</RouterLink>
-    <RouterLink to="/project">Project</RouterLink>
-    <RouterLink to="/link">Link</RouterLink>
-    <div @click="closeMobileMenu">close</div>
+    <RouterLink :class="menuItem" to="/">Home</RouterLink>
+    <RouterLink :class="menuItem" to="/about">About</RouterLink>
+    <RouterLink :class="menuItem" to="/tech">Tech Stack</RouterLink>
+    <RouterLink :class="menuItem" to="/project">Project</RouterLink>
+    <RouterLink :class="menuItem" to="/link">Link</RouterLink>
+    <div :class="menuItem" @click="closeMobileMenu">
+      <font-awesome-icon icon="fa-solid fa-circle-xmark" />
+    </div>
   </div>
 </template>
 
@@ -81,7 +101,7 @@ export default {
   flex-direction: row;
   justify-content: flex-end;
   background-color: rgba(56, 56, 228, 0.5);
-  padding: 20px 10px 20px 0;
+  padding: 20px 0;
   position: sticky;
   top: 0;
 }
@@ -120,6 +140,7 @@ export default {
   background-color: white;
   padding: 20px;
   text-align: center;
+  gap: 10px;
 }
 
 .mobileFloat a {
@@ -144,5 +165,10 @@ export default {
 
 .menuText:hover {
   text-decoration: underline;
+}
+
+.menuItem {
+  color: black;
+  cursor: pointer;
 }
 </style>

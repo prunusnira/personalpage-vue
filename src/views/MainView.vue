@@ -1,6 +1,7 @@
 <script lang="ts">
 import MainButton from "@/components/main/MainButton.vue";
 import MainTitle from "@/components/main/MainTitle.vue";
+
 export default {
   name: "MainView",
   components: {

@@ -5,7 +5,7 @@ import { Lang, useLangStore } from "@/stores/lang";
 
 export default {
   name: "About",
-  components: { TxtAbout, WorkExp },
+  components: { WorkExp },
   data() {
     const lang = useLangStore().lang;
     return {

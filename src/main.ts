@@ -11,11 +11,18 @@ import {
   faAngleDoubleLeft,
   faAngleRight,
   faAngleLeft,
+  faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "./assets/main.css";
 
-library.add(faAngleDoubleRight, faAngleDoubleLeft, faAngleRight, faAngleLeft);
+library.add(
+  faAngleDoubleRight,
+  faAngleDoubleLeft,
+  faAngleRight,
+  faAngleLeft,
+  faCircleXmark
+);
 
 const app = createApp(App);
 const pinia = createPinia();
@@ -39,7 +46,5 @@ watch(
 
 app.use(pinia);
 app.use(router);
-
-// 설정된 언어값이 없으면 기본 언어를 변경
 
 app.mount("#app");
