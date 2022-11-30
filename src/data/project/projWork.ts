@@ -5,8 +5,8 @@ const ProjWork: Array<ProjItem> = [
     icon: "/project/copin200/logo.png",
     title: {
       ko: "Copin Comics 2.0",
-      jp: "",
-      en: "",
+      jp: "Copin Comics 2.0",
+      en: "Copin Comics 2.0",
     },
     simpledesc: {
       ko: "레거시 포팅 이후 새 기능 등을 추가하여 새로운 코드베이스로 개발",
@@ -47,8 +47,8 @@ const ProjWork: Array<ProjItem> = [
     icon: "/project/copin150/logo.png",
     title: {
       ko: "Copin Comics 1.5 (레거시 포팅)",
-      jp: "",
-      en: "",
+      jp: "Copin Comics 1.5 (レガシィポーティング)",
+      en: "Copin Comics 1.5 (Legacy port)",
     },
     simpledesc: {
       ko: "php로 개발되었던 기존 서비스를 React로 포팅",

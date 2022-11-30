@@ -1,6 +1,6 @@
 import type { TechDetails, TechItem } from "./techItem";
 
-const frontReact: TechDetails = {
+const frontReactK: TechDetails = {
   name: "React",
   about: [
     "주로 사용 라이브러리입니다",
@@ -16,7 +16,7 @@ const frontReact: TechDetails = {
   etc: [],
 };
 
-const frontVue: TechDetails = {
+const frontVueK: TechDetails = {
   name: "Vue",
   about: [
     "이 웹페이지가 vue3+pinia로 만들어졌어요!",
@@ -26,7 +26,7 @@ const frontVue: TechDetails = {
   etc: [],
 };
 
-const frontMarkup: TechDetails = {
+const frontMarkupK: TechDetails = {
   name: "HTML and CSS",
   about: [
     "최근에는 CSS-in-JS를 자주 활용하여 개발합니다 (styled-components, emotion-js 등)",
@@ -37,5 +37,9 @@ const frontMarkup: TechDetails = {
 
 export const techFront: TechItem = {
   title: "Frontend",
-  details: [frontReact, frontVue, frontMarkup],
+  details: {
+    ko: [frontReactK, frontVueK, frontMarkupK],
+    en: [],
+    jp: [],
+  },
 };

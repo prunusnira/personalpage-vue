@@ -50,5 +50,9 @@ const techEtc: TechDetails = {
 
 export const techNonWeb: TechItem = {
   title: "Web 이외 개발",
-  details: [techUnity, techAndroid, techUML, techEtc, techNonDev],
+  details: {
+    ko: [techUnity, techAndroid, techUML, techEtc, techNonDev],
+    en: [],
+    jp: [],
+  },
 };

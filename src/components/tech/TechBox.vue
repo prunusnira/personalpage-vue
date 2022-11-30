@@ -1,5 +1,6 @@
 <script lang="ts">
 import type { TechItem } from "@/data/tech/techItem";
+import { useLangStore } from "@/stores/lang";
 import type { PropType } from "vue";
 import TechItemVue from "./TechItem.vue";
 
@@ -7,21 +8,28 @@ export default {
   props: {
     item: Object as PropType<TechItem>,
   },
-  data: () => {
+  components: { TechItemVue },
+  data: function () {
+    const lang = useLangStore().lang;
     return {
       box: "box",
       titleBox: "titleBox",
       detailBox: "detailBox",
+      techItemDetails:
+        lang === "ko"
+          ? this.$props.item!.details.ko
+          : lang === "jp"
+          ? this.$props.item!.details.jp
+          : this.$props.item!.details.en,
     };
   },
-  components: { TechItemVue },
 };
 </script>
 
 <template>
   <div :class="box">
     <div :class="titleBox">{{ item!.title }}</div>
-    <div :class="detailBox" v-for="i in item!.details">
+    <div :class="detailBox" v-for="i in techItemDetails">
       <TechItemVue :data="i" />
     </div>
   </div>

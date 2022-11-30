@@ -16,5 +16,9 @@ const backNode: TechDetails = {
 
 export const techBackend: TechItem = {
   title: "Backend",
-  details: [backSpring, backNode],
+  details: {
+    ko: [backSpring, backNode],
+    en: [],
+    jp: [],
+  },
 };

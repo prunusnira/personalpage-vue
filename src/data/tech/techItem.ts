@@ -1,6 +1,12 @@
 export type TechItem = {
   title: string;
-  details: TechDetails[];
+  details: TechDetailsIntl;
+};
+
+export type TechDetailsIntl = {
+  ko: TechDetails[];
+  en: TechDetails[];
+  jp: TechDetails[];
 };
 
 export type TechDetails = {
