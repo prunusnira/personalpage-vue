@@ -90,13 +90,15 @@ export default {
 .aboutWrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   padding-top: 16px;
+  width: 100%;
 }
 
 .aboutBox {
   background-color: #dfdfdf;
-  width: 100%;
+  width: 90%;
   max-width: 1024px;
   border-radius: 10px;
   padding: 10px;
@@ -118,6 +120,6 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 20px;
+  padding: 10px;
 }
 </style>

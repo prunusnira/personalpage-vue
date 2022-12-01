@@ -35,11 +35,77 @@ const frontMarkupK: TechDetails = {
   etc: [],
 };
 
+const frontReactJ: TechDetails = {
+  name: "React",
+  about: [
+    "主に利用しているライブラリです",
+    "言語はTypeScriptを使っています",
+    "Custom Hooksを活用しビスネスロジックを作成・管理します",
+    "状態管理ライブラリを活用できます (reduxなど)",
+    "NextJSを利用したSSRウェブサイトの作成経験があります",
+  ],
+  exp: [
+    "業務・個人プロジェクト多数から利用",
+    "詳細はProjectページを参考にしてください",
+  ],
+  etc: [],
+};
+
+const frontVueJ: TechDetails = {
+  name: "Vue",
+  about: [
+    "このページがvue3+piniaでつくられました",
+    "まだ業務で利用したことはありませんが、研究中です",
+  ],
+  exp: [],
+  etc: [],
+};
+
+const frontMarkupJ: TechDetails = {
+  name: "HTML and CSS",
+  about: ["最近はCSS-in-JSをよく使っています (styled-components, emotion-js)"],
+  exp: [],
+  etc: [],
+};
+
+const frontReactE: TechDetails = {
+  name: "React",
+  about: [
+    "Mostly used library",
+    "Using TypeScript for development",
+    "Using custom hooks to generate and manage business logic",
+    "Experienced state management libraries (such as redux)",
+    "Have experience for developing SSR web site using NextJS",
+  ],
+  exp: [
+    "Used in several work and personal projects",
+    "Check project page for details",
+  ],
+  etc: [],
+};
+
+const frontVueE: TechDetails = {
+  name: "Vue",
+  about: [
+    "This web page is made of vue3+pinia",
+    "Still not used in work, but still studying",
+  ],
+  exp: [],
+  etc: [],
+};
+
+const frontMarkupE: TechDetails = {
+  name: "HTML and CSS",
+  about: ["Using CSS-in-JS recently (styled-components, emotion-js)"],
+  exp: [],
+  etc: [],
+};
+
 export const techFront: TechItem = {
   title: "Frontend",
   details: {
     ko: [frontReactK, frontVueK, frontMarkupK],
-    en: [],
-    jp: [],
+    en: [frontReactE, frontVueE, frontMarkupE],
+    jp: [frontReactJ, frontVueJ, frontMarkupJ],
   },
 };

@@ -6,9 +6,3 @@ export type ExpDataType = {
   etc: string;
   tech: string;
 };
-
-export type ExpIntlType = {
-  ko: Array<ExpDataType>;
-  en: Array<ExpDataType>;
-  jp: Array<ExpDataType>;
-};
