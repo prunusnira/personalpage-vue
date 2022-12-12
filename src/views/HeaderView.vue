@@ -102,9 +102,10 @@ export default {
   flex-direction: row;
   justify-content: flex-end;
   background-color: rgba(56, 56, 228, 0.5);
-  padding: 20px 0;
+  padding: 20px 30px 20px 0;
   position: sticky;
   top: 0;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 500px) {
@@ -151,11 +152,11 @@ export default {
 
 .langFloat {
   display: none;
-  right: 30px;
+  right: 80px;
 }
 
 .mobileFloat {
-  right: 80px;
+  right: 130px;
 }
 
 .menuText {
