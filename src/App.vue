@@ -2,10 +2,12 @@
 import { RouterView } from "vue-router";
 import HeaderView from "./views/HeaderView.vue";
 import { Theme, useThemeStore } from "@/stores/theme";
+import FooterView from "./views/FooterView.vue";
 
 export default {
   components: {
     HeaderView,
+    FooterView,
   },
   data() {
     const theme = useThemeStore().theme;
@@ -20,6 +22,7 @@ export default {
   <div :class="view">
     <HeaderView />
     <RouterView />
+    <FooterView />
   </div>
 </template>
 
@@ -30,7 +33,7 @@ export default {
 }
 
 .dark {
-  background-color: #030427;
+  background-color: #292930;
   color: white;
 }
 </style>
