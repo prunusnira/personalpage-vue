@@ -26,24 +26,28 @@ export default {
   <div :class="view">
     <MainButton
       iconUrl="/main/icon_about.png"
+      iconUrlWhite="/main/icon_about_white.png"
       text="About"
       :desc="TxtMain.btn.about"
       href="/about"
     />
     <MainButton
       iconUrl="/main/icon_tech.png"
+      iconUrlWhite="/main/icon_tech_white.png"
       text="Tech Stack"
       :desc="TxtMain.btn.tech"
       href="/tech"
     />
     <MainButton
       iconUrl="/main/icon_proj.png"
+      iconUrlWhite="/main/icon_proj_white.png"
       text="Project"
       :desc="TxtMain.btn.proj"
       href="/project"
     />
     <MainButton
       iconUrl="/main/icon_link.png"
+      iconUrlWhite="/main/icon_link_white.png"
       text="Link"
       :desc="TxtMain.btn.link"
       href="/link"

@@ -2,17 +2,20 @@
 import TxtAbout from "@/data/text/about";
 import WorkExp from "@/components/about/WorkExp.vue";
 import { Lang, useLangStore } from "@/stores/lang";
+import { useThemeStore } from "@/stores/theme";
 
 export default {
   name: "About",
   components: { WorkExp },
   data() {
     const lang = useLangStore().lang;
+    const theme = useThemeStore().theme;
+
     return {
       about: "about",
       title: "title",
       aboutWrapper: "aboutWrapper",
-      aboutBox: "aboutBox",
+      aboutBox: theme === 'light' ? "aboutBox aboutLight" : "aboutBox aboutDark",
       subtitle: "subtitle",
       content: "content",
       contentWrap: "contentWrap",
@@ -97,11 +100,18 @@ export default {
 }
 
 .aboutBox {
-  background-color: #dfdfdf;
   width: 90%;
   max-width: 1024px;
   border-radius: 10px;
   padding: 10px;
+}
+
+.aboutLight {
+  background-color: #dfdfdf;
+}
+
+.aboutDark {
+  background-color: #121212;
 }
 
 .subtitle {

@@ -4,6 +4,7 @@ import { useThemeStore } from "@/stores/theme";
 export default {
   props: {
     iconUrl: String,
+    iconUrlWhite: String,
     text: String,
     desc: String,
     href: String,
@@ -29,7 +30,7 @@ export default {
 <template>
   <button :class="btnAll" @click="moveToLink">
     <div :class="btnTop">
-      <img :src="iconUrl" />
+      <img :src="theme === 'light' ? iconUrl : iconUrlWhite " />
       <span>{{ text }}</span>
     </div>
     <div :class="btnBottom">

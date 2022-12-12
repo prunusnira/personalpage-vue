@@ -1,6 +1,7 @@
 <script lang="ts">
 import type ProjItem from "@/data/project/projectItem";
 import { useLangStore } from "@/stores/lang";
+import { useThemeStore } from "@/stores/theme";
 import type { PropType } from "vue";
 
 export default {
@@ -9,8 +10,9 @@ export default {
   },
   data: () => {
     const lang = useLangStore().lang as "ko" | "jp" | "en";
+    const theme = useThemeStore().theme
     return {
-      wrap: "wrap",
+      wrap: theme === 'light' ? "wrap wrapLight" : "wrap wrapDark",
       header: "header",
       headerLeft: "headerLeft",
       icon: "icon",
@@ -18,7 +20,7 @@ export default {
       title: "title",
       subtitle: "subtitle",
       type: "type",
-      bottomWrap: "bottomWrap",
+      bottomWrap: theme === 'light' ? "bottomWrap bottomLight" : "bottomWrap bottomDark",
       itemTitle: "itemTitle",
       bottomItem: "bottomItem",
       itemImgWrap: "itemImgWrap",
@@ -105,8 +107,15 @@ export default {
 <style scoped>
 .wrap {
   width: 100%;
-  background-color: #efefef;
   border-radius: 10px;
+}
+
+.wrapLight {
+  background-color: #efefef;
+}
+
+.wrapDark {
+  background-color: #101010;
 }
 
 .header {
@@ -145,12 +154,32 @@ export default {
 }
 
 .bottomWrap {
-  background-color: #ffffff;
   margin: var(--pval);
   padding: var(--pval);
   border-radius: 10px;
   visibility: var(--isOpen);
   height: var(--height);
+}
+
+.bottomLight {
+  background-color: #ffffff;
+}
+
+.bottomLight a {
+  color: darkblue;
+}
+
+.bottomLight a:checked {
+  color: darkblue;
+}
+
+.bottomDark {
+  background-color: #000000;
+  border: solid 1px #aaaaaa;
+}
+
+.bottomDark a {
+  color: yellow;
 }
 
 .itemTitle {

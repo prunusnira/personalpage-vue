@@ -1,6 +1,7 @@
 <script lang="ts">
 import type { TechItem } from "@/data/tech/techItem";
 import { useLangStore } from "@/stores/lang";
+import { useThemeStore } from "@/stores/theme";
 import type { PropType } from "vue";
 import TechItemVue from "./TechItem.vue";
 
@@ -11,10 +12,11 @@ export default {
   components: { TechItemVue },
   data: function () {
     const lang = useLangStore().lang;
+    const theme = useThemeStore().theme
     return {
       box: "box",
-      titleBox: "titleBox",
-      detailBox: "detailBox",
+      titleBox: theme === 'light' ? "titleBox titleLight" : "titleBox titleDark",
+      detailBox: theme === 'light' ? "detailBox detailLight" : "detailBox detailDark",
       techItemDetails:
         lang === "ko"
           ? this.$props.item!.details.ko
@@ -43,7 +45,6 @@ export default {
 }
 
 .titleBox {
-  background-color: #dfdfdf;
   border-radius: 10px 10px 0 0;
   padding: 20px;
   font-weight: bold;
@@ -51,9 +52,20 @@ export default {
   line-height: 24px;
 }
 
+.titleLight {
+  background-color: #dfdfdf;}
+
+.titleDark{
+  background-color: #121212;}
+
 .detailBox {
-  background-color: #efefef;
   border-radius: 10px;
   margin: 10px;
 }
+
+.detailLight {
+  background-color: #efefef;}
+
+.detailDark{
+  background-color: #010101;}
 </style>
