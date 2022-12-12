@@ -2,6 +2,7 @@ import type { TechDetails, TechItem } from "./techItem";
 
 const frontReactK: TechDetails = {
   name: "React",
+  icon: "/tech/react.png",
   about: [
     "주로 사용 라이브러리입니다",
     "언어는 TypeScript를 대부분 사용합니다",
@@ -18,6 +19,7 @@ const frontReactK: TechDetails = {
 
 const frontVueK: TechDetails = {
   name: "Vue",
+  icon: "/tech/vue.png",
   about: [
     "이 웹페이지가 vue3+pinia로 만들어졌어요!",
     "아직 업무등에 사용해 본 적은 없지만 공부중입니다",
@@ -28,6 +30,7 @@ const frontVueK: TechDetails = {
 
 const frontMarkupK: TechDetails = {
   name: "HTML and CSS",
+  icon: "/tech/html.png",
   about: [
     "최근에는 CSS-in-JS를 자주 활용하여 개발합니다 (styled-components, emotion-js 등)",
   ],
@@ -37,6 +40,7 @@ const frontMarkupK: TechDetails = {
 
 const frontReactJ: TechDetails = {
   name: "React",
+  icon: "/tech/react.png",
   about: [
     "主に利用しているライブラリです",
     "言語はTypeScriptを使っています",
@@ -53,6 +57,7 @@ const frontReactJ: TechDetails = {
 
 const frontVueJ: TechDetails = {
   name: "Vue",
+  icon: "/tech/vue.png",
   about: [
     "このページがvue3+piniaでつくられました",
     "まだ業務で利用したことはありませんが、研究中です",
@@ -63,6 +68,7 @@ const frontVueJ: TechDetails = {
 
 const frontMarkupJ: TechDetails = {
   name: "HTML and CSS",
+  icon: "/tech/html.png",
   about: ["最近はCSS-in-JSをよく使っています (styled-components, emotion-js)"],
   exp: [],
   etc: [],
@@ -70,6 +76,7 @@ const frontMarkupJ: TechDetails = {
 
 const frontReactE: TechDetails = {
   name: "React",
+  icon: "/tech/react.png",
   about: [
     "Mostly used library",
     "Using TypeScript for development",
@@ -86,6 +93,7 @@ const frontReactE: TechDetails = {
 
 const frontVueE: TechDetails = {
   name: "Vue",
+  icon: "/tech/vue.png",
   about: [
     "This web page is made of vue3+pinia",
     "Still not used in work, but still studying",
@@ -96,6 +104,7 @@ const frontVueE: TechDetails = {
 
 const frontMarkupE: TechDetails = {
   name: "HTML and CSS",
+  icon: "/tech/html.png",
   about: ["Using CSS-in-JS recently (styled-components, emotion-js)"],
   exp: [],
   etc: [],

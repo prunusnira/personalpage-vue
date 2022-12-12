@@ -9,7 +9,9 @@ export default {
   data: () => {
     return {
       itemBox: "itemBox",
+      titleBox: "titleBox",
       title: "title",
+      titleIcon: "titleIcon",
       itemTitle: "itemTitle",
     };
   },
@@ -18,7 +20,10 @@ export default {
 
 <template>
   <div :class="itemBox">
-    <div :class="title">{{ data!.name }}</div>
+    <div :class="titleBox">
+      <img :class="titleIcon" :src="data!.icon" />
+      <div :class="title">{{ data!.name }}</div>
+    </div>
     <div v-if="data!.about.length > 0">
       <span :class="itemTitle">About</span>
       <ul>
@@ -45,10 +50,27 @@ export default {
   padding: 30px;
 }
 
+.titleBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 20px;
+}
+
 .title {
   line-height: 40px;
   font-size: 20px;
   font-weight: bold;
+}
+
+.titleIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #efefef;
+  border: solid 3px green;
+  border-radius: 10px;
+  padding: 3px;
 }
 
 .itemTitle {

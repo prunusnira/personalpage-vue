@@ -11,6 +11,7 @@ export type TechDetailsIntl = {
 
 export type TechDetails = {
   name: string;
+  icon: string;
   about: string[];
   exp: string[];
   etc: string[];

@@ -2,6 +2,7 @@ import type { TechDetails } from "../techItem";
 
 export const techUnityJ: TechDetails = {
   name: "Unity 3D",
+  icon: "/tech/unity.png",
   about: ["以前の会社・個人プロジェクトで簡単なゲームを作ったことがあります"],
   exp: [
     "AIライブラリを活用したゲーム開発 (業務)",
@@ -12,6 +13,7 @@ export const techUnityJ: TechDetails = {
 
 export const techAndroidJ: TechDetails = {
   name: "Android",
+  icon: "/tech/android.png",
   about: ["大学時代からAndroidのアプリを制作してリリースの経験もあります"],
   exp: [],
   etc: [],
@@ -19,6 +21,7 @@ export const techAndroidJ: TechDetails = {
 
 export const techUMLJ: TechDetails = {
   name: "UML設計",
+  icon: "/tech/uml.png",
   about: ["学部・大学院の研究室でUML設計を学び、実際の開発でも使いました"],
   exp: [],
   etc: [],
@@ -26,6 +29,7 @@ export const techUMLJ: TechDetails = {
 
 export const techNonDevJ: TechDetails = {
   name: "開発以外",
+  icon: "/tech/nondev.png",
   about: [
     "MS Officeの文書作成",
     "Photoshopでイメージ編集可能",
@@ -37,6 +41,7 @@ export const techNonDevJ: TechDetails = {
 
 export const techEtcJ: TechDetails = {
   name: "その他",
+  icon: "/tech/etc.png",
   about: [
     "データベースが必要なときはRDBをよく利用します",
     "バージョンコントロールにはGitLab, BitBucket, GitHubを利用します",
