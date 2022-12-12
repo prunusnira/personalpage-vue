@@ -1,5 +1,6 @@
 <script lang="ts">
 import type ProjItem from "@/data/project/projectItem";
+import { useLangStore } from "@/stores/lang";
 import type { PropType } from "vue";
 
 export default {
@@ -7,6 +8,7 @@ export default {
     item: Object as PropType<ProjItem>,
   },
   data: () => {
+    const lang = useLangStore().lang as "ko" | "jp" | "en";
     return {
       wrap: "wrap",
       header: "header",
@@ -22,6 +24,7 @@ export default {
       itemImgWrap: "itemImgWrap",
       itemImg: "itemImg",
       isOpen: false,
+      lang,
     };
   },
   methods: {
@@ -47,8 +50,8 @@ export default {
       <div :class="headerLeft">
         <img :class="icon" :src="item!.icon" />
         <div :class="titlewrap">
-          <div :class="title">{{ item!.title["ko"] }}</div>
-          <div :class="subtitle">{{ item!.simpledesc["ko"] }}</div>
+          <div :class="title">{{ item!.title[lang] }}</div>
+          <div :class="subtitle">{{ item!.simpledesc[lang] }}</div>
         </div>
       </div>
       <div :class="type">
@@ -76,11 +79,11 @@ export default {
       </div>
       <div :class="bottomItem">
         <span :class="itemTitle">About</span>
-        <div v-html="item!.content['ko']"></div>
+        <div v-html="item!.content[lang]"></div>
       </div>
       <div :class="bottomItem">
         <span :class="itemTitle">Development</span>
-        <div v-html="item!.dev['ko']"></div>
+        <div v-html="item!.dev[lang]"></div>
       </div>
       <div :class="bottomItem">
         <div :class="itemTitle">Images</div>

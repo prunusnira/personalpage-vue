@@ -1,4 +1,6 @@
 <script lang="ts">
+import { useThemeStore } from "@/stores/theme";
+
 export default {
   props: {
     iconUrl: String,
@@ -7,10 +9,12 @@ export default {
     href: String,
   },
   data: () => {
+    const theme = useThemeStore().theme;
     return {
       btnAll: "btn",
       btnTop: "top",
       btnBottom: "bottom",
+      theme,
     };
   },
   methods: {

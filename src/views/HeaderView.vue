@@ -36,6 +36,7 @@ export default {
       const store = useThemeStore();
       const nextTheme = store.theme === Theme.LIGHT ? Theme.DARK : Theme.LIGHT;
       store.changeTheme(nextTheme);
+      location.reload();
     },
   },
   created() {

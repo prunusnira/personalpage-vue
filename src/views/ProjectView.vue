@@ -19,7 +19,7 @@ export default {
       Project
       <font-awesome-icon icon="fa-solid fa-angle-double-left" />
     </div>
-    <div>각 항목을 클릭해서 펼쳐보세요</div>
+    <div>CLICK TO EXPAND EACH ITEM</div>
     <ProjLayout />
   </div>
 </template>
