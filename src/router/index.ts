@@ -3,10 +3,10 @@ import AboutView from "@/views/AboutView.vue";
 import LinkView from "@/views/LinkView.vue";
 import ProjectViewVue from "@/views/ProjectView.vue";
 import TechStackViewVue from "@/views/TechStackView.vue";
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(),
   routes: [
     {
       path: "/",

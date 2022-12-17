@@ -40,8 +40,8 @@ export default {
       location.reload();
     },
     construction: () => {
-      alert('Translation is under construction')
-    }
+      alert("Translation is under construction");
+    },
   },
   created() {
     const store = useLangStore();
@@ -49,7 +49,7 @@ export default {
       let lang = navigator.language;
 
       //if (lang === "ko" || lang === "ko-kr" || lang === "ko-KR") {
-        store.changeLang(Lang.KO);
+      store.changeLang(Lang.KO);
       /*} else if (lang === "ja" || lang === "ja-jp" || lang === "ja-JP") {
         store.changeLang(Lang.JP);
       } else {
@@ -89,10 +89,10 @@ export default {
 
   <div :class="mobileFloat" id="mobileMenu">
     <RouterLink :class="menuItem" to="/">Home</RouterLink>
-    <RouterLink :class="menuItem" to="/about">About</RouterLink>
-    <RouterLink :class="menuItem" to="/tech">Tech Stack</RouterLink>
-    <RouterLink :class="menuItem" to="/project">Project</RouterLink>
-    <RouterLink :class="menuItem" to="/link">Link</RouterLink>
+    <RouterLink :class="menuItem" to="/#/about">About</RouterLink>
+    <RouterLink :class="menuItem" to="/#/tech">Tech Stack</RouterLink>
+    <RouterLink :class="menuItem" to="/#/project">Project</RouterLink>
+    <RouterLink :class="menuItem" to="/#/link">Link</RouterLink>
     <div :class="menuItem" @click="closeMobileMenu">
       <font-awesome-icon icon="fa-solid fa-circle-xmark" />
     </div>
