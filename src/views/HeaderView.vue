@@ -48,13 +48,13 @@ export default {
     if (!store.lang) {
       let lang = navigator.language;
 
-      //if (lang === "ko" || lang === "ko-kr" || lang === "ko-KR") {
-      store.changeLang(Lang.KO);
-      /*} else if (lang === "ja" || lang === "ja-jp" || lang === "ja-JP") {
-        store.changeLang(Lang.JP);
+      if (lang === "ko" || lang === "ko-kr" || lang === "ko-KR") {
+        store.changeLang(Lang.KO);
+        // } else if (lang === "ja" || lang === "ja-jp" || lang === "ja-JP") {
+        //   store.changeLang(Lang.JP);
       } else {
         store.changeLang(Lang.EN);
-      }*/
+      }
     }
   },
 };
@@ -80,7 +80,7 @@ export default {
 
   <div :class="langFloat" id="langMenu">
     <div :class="menuItem" @click="changeLang(0)">한국어</div>
-    <div :class="menuItemDis" @click="construction()">English</div>
+    <div :class="menuItem" @click="changeLang(1)">English</div>
     <div :class="menuItemDis" @click="construction()">日本語</div>
     <div :class="menuItem" @click="closeLangMenu">
       <font-awesome-icon icon="fa-solid fa-circle-xmark" />
