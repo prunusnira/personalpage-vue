@@ -101,7 +101,7 @@ const ProjPersonal: Array<ProjItem> = [
           </ul>`,
     },
     image: [
-      "/project/sin/01.jpg",
+      "/project/sin/01.png",
       "/project/sin/02.png",
       "/project/sin/03.jpg",
     ],

@@ -16,7 +16,7 @@ const ProjWork: Array<ProjItem> = [
     platform: "Web",
     tech: "ReactJS (TypeScript), NextJS, Redux, styled-components",
     period: "2022.02-2022.07",
-    link: ["https://www.copincomics.com"],
+    link: [],
     content: {
       ko: `<ul>
               <li>1.5 개발 완료 후 새로운 기능을 추가하는 확장 버전 개발을 초기에 계획</li>
@@ -73,7 +73,7 @@ const ProjWork: Array<ProjItem> = [
     platform: "Web",
     tech: "ReactJS (TypeScript), styled-components, Redux",
     period: "2021.12-2022.02",
-    link: ["https://www.copincomics.com"],
+    link: [],
     content: {
       ko: `<ul>
                     <li>php로 서버/클라이언트가 통합되어 개발되었던 초기의 서비스를 프론트와 백엔드로 분리</li>
@@ -139,7 +139,8 @@ const ProjWork: Array<ProjItem> = [
     platform: "Web, Android",
     tech: "Android (Kotlin), ReactJS (TypeScript), Bootstrap, NGINX, Spring Boot, MariaDB",
     period: "2019.10-2020.02",
-    link: ["https://chatapp.crosscert.com"],
+    link: [],
+    //"https://chatapp.crosscert.com"
     //"https://play.google.com/store/apps/details?id=com.crosscert.aichat"],
     content: {
       ko: `<ul>
