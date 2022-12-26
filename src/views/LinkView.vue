@@ -21,8 +21,12 @@ export default {
       <font-awesome-icon icon="fa-solid fa-angle-double-left" />
     </div>
     <div :class="wrapper">
-      <LinkItemVue title="Blog" src="https://prunusnira.tistory.com" />
+      <LinkItemVue title="Blog (Korean)" src="https://prunusnira.tistory.com" />
       <LinkItemVue title="GitHub" src="https://github.com/prunusnira" />
+      <LinkItemVue
+        title="LinkedIn"
+        src="https://www.linkedin.com/in/tjkang0207/"
+      />
       <LinkItemVue title="Skill Navigator" src="https://sin.nira.one" />
       <LinkItemVue title="PIU Clear Manager" src="https://piu.nira.one" />
       <LinkItemVue title="Twitch BanPicker" src="https://banpick.nira.one" />
