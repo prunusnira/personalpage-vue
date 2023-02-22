@@ -21,7 +21,7 @@ export default {
       <font-awesome-icon icon="fa-solid fa-angle-double-left" />
     </div>
     <div :class="wrapper">
-      <LinkItemVue title="Blog (Korean)" src="https://prunusnira.tistory.com" />
+      <LinkItemVue title="Blog (Notion)" src="https://blog.nira.one" />
       <LinkItemVue title="GitHub" src="https://github.com/prunusnira" />
       <LinkItemVue
         title="LinkedIn"
